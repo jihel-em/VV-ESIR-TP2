@@ -1,6 +1,6 @@
 # No getter!
 
-With the help of JavaParser implement a program that obtains the private fields of public classes that have no public getter in a Java project. 
+With the help of JavaParser implement a program that obtains the private fields of public classes that has no public getter in a Java project. 
 
 A field has a public getter if, in the same class, there is a public method that simply returns the value of the field and whose name is `get<name-of-the-field>`.
 
