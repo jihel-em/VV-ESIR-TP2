@@ -6,7 +6,7 @@ Explain under which circumstances *Tight Class Cohesion* (TCC) and *Loose Class 
 
 TCC and LCC produce the same values if all methods of a class have a direct link with every method they would have an indirect link with.
 
-``
+```
 public class Exo1 {
 
 	public int method1() {
@@ -35,7 +35,7 @@ public class Exo1 {
 		return "Bonjour";
 	}
 }
-``
+```
 method1() is directly connected to methodBool() and method2(), so methodBool() and method2() have to be directly linked for TCC and LCC to be equal.
 Note that method3() and method4() are not connected to the other methods, and TCC and LCC are still not equal. They were added to show that in order for them to be the same, it is not needed for every method of a class to be connected to every other one (even though such a class would merit to be partitioned in multiple ones in a real scenario).
 
