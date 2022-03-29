@@ -25,11 +25,12 @@ Use your rule with different projects and describe you findings below. See the [
 
 Our XML definition:
 
-```<ruleset name="NestedIfRuleset"
-		 xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+```Xml
+<ruleset name="NestedIfRuleset"
+	 xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
-	<description>
+    <description>
         Ruleset test
     </description>
     <rule name="NestedIf" ref="category/java/design.xml/AvoidDeeplyNestedIfStmts">
@@ -44,7 +45,8 @@ Commons-collections analyse:
 
 We found several patterns in the code:
 
-```C:\Users\lucas\OneDrive\Documents\ESIR2\MDI\TP2\commons-collections-master\commons-collections-master\src\main\java\org\apache\commons\collections4\MapUtils.java:230:  NestedIf:       Deeply nested if..then statements are hard to read
+```
+C:\Users\lucas\OneDrive\Documents\ESIR2\MDI\TP2\commons-collections-master\commons-collections-master\src\main\java\org\apache\commons\collections4\MapUtils.java:230:  NestedIf:       Deeply nested if..then statements are hard to read
 C:\Users\lucas\OneDrive\Documents\ESIR2\MDI\TP2\commons-collections-master\commons-collections-master\src\main\java\org\apache\commons\collections4\MapUtils.java:233:  NestedIf:       Deeply nested if..then statements are hard to read
 C:\Users\lucas\OneDrive\Documents\ESIR2\MDI\TP2\commons-collections-master\commons-collections-master\src\main\java\org\apache\commons\collections4\MapUtils.java:236:  NestedIf:       Deeply nested if..then statements are hard to read
 C:\Users\lucas\OneDrive\Documents\ESIR2\MDI\TP2\commons-collections-master\commons-collections-master\src\main\java\org\apache\commons\collections4\MapUtils.java:934:  NestedIf:       Deeply nested if..then statements are hard to read
@@ -53,7 +55,7 @@ C:\Users\lucas\OneDrive\Documents\ESIR2\MDI\TP2\commons-collections-master\commo
 ```
 
 The first three are due to this function: 
-```
+```Java
 public static <K> Boolean getBoolean(final Map<? super K, ?> map, final K key) {
     if (map != null) {
         final Object answer = map.get(key);
@@ -76,7 +78,7 @@ public static <K> Boolean getBoolean(final Map<? super K, ?> map, final K key) {
 We observed that there are three nested if statements three times. 
 
 The last detected pattern is due to this function:
-```
+```Java
 public synchronized void addComposited(final Map<K, V> map) throws IllegalArgumentException {
     if (map != null) {
         for (int i = composite.length - 1; i >= 0; --i) {
