@@ -34,10 +34,10 @@ Our XML definition:
         Ruleset test
     </description>
     <rule name="NestedIf" ref="category/java/design.xml/AvoidDeeplyNestedIfStmts">
-		<properties>
-			<property name="problemDepth" value="3" />
-		</properties>
-	</rule>
+	<properties>
+	    <property name="problemDepth" value="3" />
+	</properties>
+     </rule>
 </ruleset>
 ```
 
