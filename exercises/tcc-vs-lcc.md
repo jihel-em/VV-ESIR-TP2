@@ -6,7 +6,7 @@ Explain under which circumstances *Tight Class Cohesion* (TCC) and *Loose Class 
 
 TCC and LCC produce the same values if all methods of a class have a direct link with every method they would have an indirect link with.
 
-```
+```Java
 public class Exo1 {
 
 	public int method1() {
